@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nida's Magic — Chi sono</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png">
+  
+</head>
+<body>
+ 
+<!-- ── HEADER ── -->
+<header>
+  <a class="header-brand" href="Sito_di_magie.html">
+    <img src="logo.png" class="logo" alt="Logo Nida's Magic">
+    <span class="header-title">Nida's <span>Magic</span></span>
+  </a>
+ 
+  <nav class="desktop-nav">
+    <a href="Sito_di_magie.html" class="nav-home">Home</a>
+    <a href="chi_sono.html" class="active">Chi sono?</a>
+    <a href="Spiegazione_1.html">Erdnase Color Change</a>
+    <a href="Spiegazione_2.html">Magia 2</a>
+    <a href="Spiegazione_3.html">Magia 3</a>
+    <a href="Spiegazione_4.html">Magia 4</a>
+  </nav>
+ 
+  <button class="hamburger" id="hamburger" aria-label="Apri menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+ 
+<!-- ── MOBILE DRAWER ── -->
+<nav class="mobile-nav" id="mobileNav">
+  <a href="Sito_di_magie.html">Home</a>
+  <a href="chi_sono.html" class="active">Chi sono?</a>
+  <a href="Spiegazione_1.html">Erdnase Color Change</a>
+  <a href="Spiegazione_2.html">Magia 2</a>
+  <a href="Spiegazione_3.html">Magia 3</a>
+  <a href="Spiegazione_4.html">Magia 4</a>
+</nav>
+ 
+<!-- ── CONTENUTO ── -->
+<div class="container">
+  <div class="card">
+    <h2>Chi sono io</h2>
+ 
+    <p>
+      Ciao! Mi chiamo Riccardo Nidasio e sono appassionato di magia.
+      Fin da piccolo mi piace stupire le persone con trucchi sorprendenti.
+    </p>
+ 
+    <p style="margin-top: 14px;">
+      In questo sito ti spiego alcune magie, così anche tu puoi impararle
+      e divertirti con i tuoi amici.
+    </p>
+ 
+    <p style="margin-top: 14px;">
+      La magia non è solo trucchi… è creatività, allenamento e passione.
+    </p>
+ 
+    <a class="btn" href="Sito_di_magie.html" style="margin-top: 24px;">Scopri le magie</a>
+  </div>
+</div>
+ 
+<!-- ── FOOTER ── -->
+<footer>
+  © 2026 — <span>Nida's Magic</span> · Tutti i diritti riservati
+</footer>
+ 
+<script>
+  const btn = document.getElementById('hamburger');
+  const nav = document.getElementById('mobileNav');
+ 
+  btn.addEventListener('click', () => {
+    const open = btn.classList.toggle('open');
+    nav.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+ 
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      btn.classList.remove('open');
+      nav.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+ 
+</body>
+</html>
+ 
